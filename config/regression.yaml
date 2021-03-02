@@ -1,0 +1,40 @@
+project_name: online_gp
+project_version: 0.0.13
+defaults:
+  - dataset: skillcraft
+  - stem: linear
+  - model: wiski_gp_regression
+  - logger: local
+
+pretrain_stem:
+  enabled: False
+  lr: 1e-1
+  num_epochs: 200
+  batch_size: 256
+
+update_stem: True
+pretrain: True
+num_batch_epochs: 200
+batch_size: 1
+logging_freq: 100
+seed:
+trial_id: 0
+dtype: float32
+
+gpytorch_global_settings:
+  max_root_decomposition_size: 512
+  max_cholesky_size: 2048
+  cg_tolerance: 1e-2
+
+# Directories for loading and storing data
+data_dir: data
+exp_name: model-dataset-version/${model.name}-${dataset.name}-${project_version}
+log_dir: ${data_dir}/experiments/regression/${exp_name}/trial_${trial_id}/${now:%Y-%m-%d_%H-%M-%S}
+checkpoint_dir: ${log_dir}/checkpoints
+
+hydra:
+  run:
+    dir: ./${log_dir}
+  sweep:
+    dir: ./${log_dir}
+    subdir: .

@@ -1,0 +1,6 @@
+# @package _group_
+_target_: online_gp.models.OnlineExactRegression
+name: exact_gp_regression
+type: regression
+init_ratio: 0.05
+lr: 1e-2

@@ -1,0 +1,9 @@
+# @package _group_
+_target_: online_gp.models.OnlineSGPRegression
+name: sgpr_regression
+init_ratio: 0.05
+num_inducing: 256
+lr: 1e-2
+learn_inducing_locations: True
+num_update_steps: ${batch_size}
+jitter: 1e-2

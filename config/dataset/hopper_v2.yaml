@@ -1,0 +1,10 @@
+# @package _group_
+name: hopper_v2
+type: regression
+_target_: online_gp.datasets.regression.HopperV2
+input_dim: 14
+base_lr: 1e-2
+dataset_dir: /datasets/mujoco/Hopper-v2
+subsample_ratio: 1.0
+split_seed: 0
+shuffle: True

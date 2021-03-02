@@ -1,0 +1,4 @@
+# @package _group_
+_target_: upcycle.logging.S3Logger
+log_dir: projects/${project_name}/${log_dir}
+bucket_name: samuel-stanton-personal-bucket

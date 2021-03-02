@@ -1,0 +1,10 @@
+# @package _group_
+name: powerplant
+type: regression
+_target_: online_gp.datasets.regression.Powerplant
+input_dim: 4
+baseline_rmse: 0.2169
+base_lr: 5e-2
+dataset_dir: /datasets/uci/powerplant
+subsample_ratio: 1.0
+split_seed: 0

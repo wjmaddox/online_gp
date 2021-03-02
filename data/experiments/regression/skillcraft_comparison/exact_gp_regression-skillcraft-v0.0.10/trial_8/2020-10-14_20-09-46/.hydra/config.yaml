@@ -1,0 +1,49 @@
+checkpoint_dir: data/experiments/regression/model-dataset-version/exact_gp_regression-skillcraft-0.0.10/trial_8/2020-10-14_20-09-46/checkpoints
+data_dir: data
+dataset:
+  base_lr: 0.05
+  baseline_rmse: 1.8619
+  class: online_gp.datasets.regression.Skillcraft
+  input_dim: 19
+  name: skillcraft
+  params:
+    dataset_dir: /datasets/uci/skillcraft
+    split_seed: 0
+    subsample_ratio: 1.0
+  type: regression
+exp_name: model-dataset-version/exact_gp_regression-skillcraft-0.0.10
+gpytorch_global_settings:
+  cg_tolerance: 0.01
+  max_cholesky_size: 2048
+  max_root_decomposition_size: 512
+log_dir: data/experiments/regression/model-dataset-version/exact_gp_regression-skillcraft-0.0.10/trial_8/2020-10-14_20-09-46
+logger:
+  class: upcycle.logging.S3Logger
+  params:
+    bucket_name: samuel-stanton-personal-bucket
+    log_dir: projects/online_gp/data/experiments/regression/model-dataset-version/exact_gp_regression-skillcraft-0.0.10/trial_8/2020-10-14_20-09-46
+logging_freq: 100
+model:
+  class: OnlineExactRegression
+  init_ratio: 0.05
+  name: exact_gp_regression
+  params:
+    lr: 0.01
+  type: regression
+num_batch_epochs: 200
+pretrain: true
+pretrain_stem:
+  batch_size: 256
+  enabled: false
+  lr: 0.1
+  num_epochs: 200
+project_name: online_gp
+project_version: 0.0.10
+seed: 7142
+stem:
+  class: online_gp.models.stems.LinearStem
+  params:
+    feature_dim: 2
+    input_dim: 19
+trial_id: 8
+update_stem: true

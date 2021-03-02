@@ -1,0 +1,8 @@
+# @package _group_
+name: banana
+type: classification
+_target_: online_gp.datasets.classification.Banana
+num_classes: 2
+input_dim: 2
+dataset_dir:
+subsample_ratio: 1.0

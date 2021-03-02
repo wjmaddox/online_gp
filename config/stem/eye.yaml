@@ -1,0 +1,3 @@
+# @package _group_
+_target_: online_gp.models.stems.Identity
+input_dim: ${dataset.input_dim}

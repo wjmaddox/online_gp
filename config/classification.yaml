@@ -1,0 +1,29 @@
+project_name: online_gp
+project_version: 0.0.12
+defaults:
+  - dataset: banana
+  - stem: eye
+  - model: wiski_gpd
+  - logger: local
+
+update_stem: True
+pretrain: True
+num_batch_epochs: 200
+logging_freq: 100
+seed:
+trial_id: 0
+
+gpytorch_global_settings:
+  max_root_decomposition_size: 512
+  max_cholesky_size: 2048
+  cg_tolerance: 1e-2
+
+# Directories for loading and storing data
+data_dir: data
+exp_name: model-dataset-version/${model.name}-${dataset.name}-v${project_version}
+log_dir: ${data_dir}/experiments/classification/${exp_name}/trial_${trial_id}/${now:%Y-%m-%d_%H-%M-%S}
+checkpoint_dir: ${log_dir}/checkpoints
+
+hydra:
+  run:
+    dir: ./${log_dir}

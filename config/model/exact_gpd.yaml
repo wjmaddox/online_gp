@@ -1,0 +1,10 @@
+# @package _group_
+_target_: online_gp.models.OnlineExactClassifier
+name: exact_gpd
+init_ratio: 0.05
+batch_gp_lr: 5e-2
+batch_stem_lr: 5e-3
+online_gp_lr: 5e-3
+online_stem_lr: 5e-4
+alpha_eps: 1e-2
+lr: 1e-2

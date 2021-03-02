@@ -1,0 +1,10 @@
+# @package _group_
+name: skillcraft
+type: regression
+_target_: online_gp.datasets.regression.Skillcraft
+input_dim: 19
+baseline_rmse: 1.8619
+base_lr: 5e-2
+dataset_dir: /datasets/uci/skillcraft
+subsample_ratio: 1.0
+split_seed: 0

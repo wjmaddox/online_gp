@@ -1,0 +1,10 @@
+# @package _group_
+name: protein
+type: regression
+_target_: online_gp.datasets.regression.Protein
+input_dim: 9
+baseline_rmse: 2.1227
+base_lr: 1e-2
+dataset_dir: /datasets/uci/protein
+subsample_ratio: 1.0
+split_seed: 0

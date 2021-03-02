@@ -1,0 +1,52 @@
+checkpoint_dir: data/experiments/regression/model-dataset-version/svgp_regression-powerplant-v0.0.10/trial_6/2020-10-12_04-37-47/checkpoints
+data_dir: data
+dataset:
+  baseline_rmse: 0.2169
+  class: online_gp.datasets.regression.Powerplant
+  input_dim: 4
+  name: powerplant
+  params:
+    dataset_dir: /datasets/uci/powerplant
+    split_seed: 0
+    subsample_ratio: 1.0
+  type: regression
+exp_name: model-dataset-version/svgp_regression-powerplant-v0.0.10
+gpytorch_global_settings:
+  cg_tolerance: 0.01
+  max_cholesky_size: 2048
+  max_root_decomposition_size: 512
+log_dir: data/experiments/regression/model-dataset-version/svgp_regression-powerplant-v0.0.10/trial_6/2020-10-12_04-37-47
+logger:
+  class: upcycle.logging.S3Logger
+  params:
+    bucket_name: samuel-stanton-personal-bucket
+    log_dir: projects/online_gp/data/experiments/regression/model-dataset-version/svgp_regression-powerplant-v0.0.10/trial_6/2020-10-12_04-37-47
+logging_freq: 100
+model:
+  batch_gp_lr: 0.05
+  batch_stem_lr: 0.005
+  class: OnlineSVGPRegression
+  init_ratio: 0.05
+  name: svgp_regression
+  online_bn_mom: null
+  online_gp_lr: 0.005
+  online_stem_lr: 0.0005
+  params:
+    beta: 0.001
+    learn_inducing_locations: true
+    lr: 0.01
+    num_inducing: 256
+    num_update_steps: 1
+    streaming: null
+num_batch_epochs: 200
+pretrain: true
+project_name: online_gp
+project_version: 0.0.10
+seed: 82803
+stem:
+  class: online_gp.models.stems.LinearStem
+  params:
+    feature_dim: 2
+    input_dim: 4
+trial_id: 6
+update_stem: true

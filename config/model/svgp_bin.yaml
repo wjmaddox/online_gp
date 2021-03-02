@@ -1,0 +1,14 @@
+# @package _group_
+_target_: online_gp.models.OnlineSVGPClassifier
+name: svgp_bin
+init_ratio: 0.05
+batch_gp_lr: 5e-2
+batch_stem_lr: 5e-3
+online_gp_lr: 5e-3
+online_stem_lr: 5e-4
+streaming: True
+num_inducing: 256
+beta: 1e-3
+learn_inducing_locations: True
+num_update_steps: 1
+lr: 1e-2  # default value

@@ -1,0 +1,49 @@
+checkpoint_dir: data/experiments/classification/model-dataset-version/svgp_bin-banana-v0.0.10/trial_2/2020-10-12_00-48-29/checkpoints
+data_dir: data
+dataset:
+  class: online_gp.datasets.classification.Banana
+  input_dim: 2
+  name: banana
+  num_classes: 2
+  params:
+    dataset_dir: null
+    subsample_ratio: 1.0
+  type: classification
+exp_name: model-dataset-version/svgp_bin-banana-v0.0.10
+gpytorch_global_settings:
+  cg_tolerance: 0.01
+  max_cholesky_size: 2048
+  max_root_decomposition_size: 512
+log_dir: data/experiments/classification/model-dataset-version/svgp_bin-banana-v0.0.10/trial_2/2020-10-12_00-48-29
+logger:
+  class: upcycle.logging.S3Logger
+  params:
+    bucket_name: samuel-stanton-personal-bucket
+    log_dir: projects/online_gp/data/experiments/classification/model-dataset-version/svgp_bin-banana-v0.0.10/trial_2/2020-10-12_00-48-29
+logging_freq: 10
+model:
+  batch_gp_lr: 0.05
+  batch_stem_lr: 0.005
+  class: OnlineSVGPClassifier
+  init_ratio: 0.05
+  name: svgp_bin
+  online_gp_lr: 0.005
+  online_stem_lr: 0.0005
+  params:
+    beta: 0.001
+    learn_inducing_locations: true
+    lr: 0.01
+    num_inducing: 256
+    num_update_steps: 1
+    streaming: null
+num_batch_epochs: 200
+pretrain: true
+project_name: online_gp
+project_version: 0.0.10
+seed: 93393
+stem:
+  class: online_gp.models.stems.Identity
+  params:
+    input_dim: 2
+trial_id: 2
+update_stem: true

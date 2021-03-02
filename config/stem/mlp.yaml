@@ -1,0 +1,6 @@
+# @package _group_
+_target_: online_gp.models.stems.MLP
+input_dim: ${dataset.input_dim}
+feature_dim: 2
+depth: 3
+hidden_dims: 1024, 512, 256

@@ -1,0 +1,9 @@
+# @package _group_
+name: svm_guide_1
+type: classification
+_target_: online_gp.datasets.classification.SVMGuide1
+num_classes: 2
+input_dim: 4
+dataset_dir: /datasets/libsvm/svmguide1
+subsample_ratio: 1.0
+split_seed: 0

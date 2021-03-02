@@ -1,0 +1,12 @@
+# @package _group_
+_target_: online_gp.models.OnlineSKIClassifier
+name: wiski_gpd
+init_ratio: 0.05
+batch_gp_lr: 5e-2
+batch_stem_lr: 5e-3
+online_gp_lr: 5e-3
+online_stem_lr: 5e-4
+alpha_eps: 1e-2
+grid_size: 16
+grid_bound: 1
+lr: 1e-2
