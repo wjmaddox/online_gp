@@ -2,9 +2,11 @@
 
 This repository contains a gpytorch implementation of WISKI (Woodbury Inversion with SKI) from the paper 
 
-[Kernel Interpolation for Scalable Online Gaussian Processes](https://github.com/wjmaddox/online_gp)
+[Kernel Interpolation for Scalable Online Gaussian Processes](https://arxiv.org/abs/2103.01454)
 
 by Samuel Stanton, Wesley J. Maddox, Ian Delbridge, Andrew Gordon Wilson
+
+:tumbler_glass:
 
 ## Introduction
 
